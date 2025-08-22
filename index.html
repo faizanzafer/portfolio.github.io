@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan Zafar | Full Stack Web & Mobile Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 scroll-smooth relative overflow-x-hidden">
+
+    <!-- Navbar -->
+    <header class="fixed w-full bg-white dark:bg-gray-800 shadow-lg z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#"
+                class="text-2xl font-bold text-gradient bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Faizan
+                Zafar</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="flex space-x-6 font-medium">
+                    <li><a href="#about" class="hover:text-blue-500 transition-colors duration-300">About</a></li>
+                    <li><a href="#skills" class="hover:text-blue-500 transition-colors duration-300">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-blue-500 transition-colors duration-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button p-2 rounded-md text-gray-700 dark:text-gray-200">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#about" class="hover:text-blue-500 transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-500 transition-colors duration-300">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-500 transition-colors duration-300">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-500 transition-colors duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white relative overflow-hidden">
+        <canvas id="particles-js"></canvas>
+        <div class="text-center px-6 z-10 relative w-full h-full flex flex-col justify-center items-center">
+            <div class="flex-grow flex flex-col justify-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4">Faizan Zafar <span
+                        class="wave-hand">👋</span></h1>
+                <div class="flex justify-center mb-6">
+                    <a href="https://github.com/faizanzafer" target="_blank"
+                        class="text-3xl hover:text-gray-300 transition-colors duration-300 mx-2" aria-label="Visit my GitHub profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/faizan-zafar-46a382159/" target="_blank"
+                        class="text-3xl hover:text-gray-300 transition-colors duration-300 mx-2" aria-label="Visit my LinkedIn profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p class="text-lg sm:text-xl md:text-2xl mb-10 px-4 typing-text" id="typing"></p>
+            </div>
+
+            <div class="mt-auto pb-10">
+                <a href="#about"
+                    class="animate-bounce inline-block text-4xl text-white hover:text-gray-300 transition-colors duration-300">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 max-w-6xl mx-auto px-6">
+        <h2
+            class="section-title text-3xl md:text-4xl font-bold mb-6 text-center text-gradient bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent animate-slideUp">
+            <i class="fas fa-user"></i> About Me
+        </h2>
+        <p class="text-lg leading-relaxed text-center max-w-3xl mx-auto mb-6 animate-slideUp">
+            Focused on creating innovative digital solutions across web and mobile platforms. Skilled in Node.js,
+            Next.js, React.js, React Native, Flutter, and cloud technologies, with experience in building real-time,
+            scalable applications. Beyond development, collaborate with and lead a dedicated team to deliver
+            high-quality projects that combine performance, usability, and long-term value. Driven by the mission of
+            building technology that solves real-world challenges and creates meaningful user experiences.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <h2
+            class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-gradient bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent animate-slideUp">
+            <i class="fas fa-laptop-code"></i> Skills
+        </h2>
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-4 animate-slideUp">
+            <span class="skill-bubble">React.js</span>
+            <span class="skill-bubble">Next.js</span>
+            <span class="skill-bubble">React Native</span>
+            <span class="skill-bubble">Flutter</span>
+            <span class="skill-bubble">Redux</span>
+            <span class="skill-bubble">JavaScript</span>
+            <span class="skill-bubble">TypeScript</span>
+            <span class="skill-bubble">TailwindCSS</span>
+            <span class="skill-bubble">Node.js</span>
+            <span class="skill-bubble">Express.js</span>
+            <span class="skill-bubble">Laravel</span>
+            <span class="skill-bubble">MySQL</span>
+            <span class="skill-bubble">MongoDB</span>
+            <span class="skill-bubble">Firebase</span>
+            <span class="skill-bubble">AWS</span>
+            <span class="skill-bubble">GCP</span>
+            <span class="skill-bubble">Stripe</span>
+            <span class="skill-bubble">PayPal</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 max-w-7xl mx-auto px-6">
+        <h2
+            class="section-title text-3xl md:text-4xl font-bold mb-12 text-center text-gradient bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent animate-slideUp">
+            <i class="fas fa-project-diagram"></i> Projects
+        </h2>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Project Card 1 -->
+            <div class="card bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500 hover:text-white transition-all duration-400 animate-slideUp"
+                data-project="hybrid-chat">
+                <h3 class="text-2xl font-bold mb-2">Hybrid-Chat App <i class="fas fa-arrow-right"></i></h3>
+                <p class="mb-2"><strong>Description:</strong> A community-based chat app for one-on-one and group
+                    interactions, with monetized Q&A and real-time communication.</p>
+                <p class="mb-2"><strong>Technologies:</strong> React Native, Node.js, Express, MongoDB, Socket.io</p>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-400 hover:text-white transition-all duration-400 animate-slideUp"
+                data-project="event-management">
+                <h3 class="text-2xl font-bold mb-2">Event Management App <i class="fas fa-arrow-right"></i></h3>
+                <p class="mb-2"><strong>Description:</strong> App for event discovery, participation, and organization
+                    with featured events and notifications.</p>
+                <p class="mb-2"><strong>Technologies:</strong> React Native, Node.js, Express, Firebase</p>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="card bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-400 hover:text-white transition-all duration-400 animate-slideUp"
+                data-project="kaocity-trivia">
+                <h3 class="text-2xl font-bold mb-2">Kaocity Trivia Game <i class="fas fa-arrow-right"></i></h3>
+                <p class="mb-2"><strong>Description:</strong> Interactive trivia game with multiplayer, rewards, and
+                    achievement tracking.</p>
+                <p class="mb-2"><strong>Technologies:</strong> React Native, Node.js, Express, Socket.io</p>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="card bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:text-white transition-all duration-400 animate-slideUp"
+                data-project="smvd">
+                <h3 class="text-2xl font-bold mb-2">SMVD – Social Media Video Downloader <i
+                        class="fas fa-arrow-right"></i></h3>
+                <p class="mb-2"><strong>Description:</strong> Full-stack cloud app for downloading videos/images from
+                    TikTok, Instagram, Facebook, YouTube with real-time progress.</p>
+                <p class="mb-2"><strong>Technologies:</strong> Next.js, React, Tailwind CSS, Node.js, Express,
+                    WebSocket, GCP, Nginx, PM2</p>
+            </div>
+
+            <!-- Project Card 5 - MATRIMONIAL -->
+            <div class="card bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white transition-all duration-400 animate-slideUp"
+                data-project="matrimonial">
+                <h3 class="text-2xl font-bold mb-2">MATRIMONIAL App <i class="fas fa-arrow-right"></i></h3>
+                <p class="mb-2"><strong>Description:</strong> High-scale matchmaking application for meaningful
+                    connections with 200,000+ user profiles.</p>
+                <p class="mb-2"><strong>Technologies:</strong> React Native, Node.js, Express, MongoDB, Docker</p>
+            </div>
+
+            <!-- Project Card 6 - GIVIT -->
+            <div class="card bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 hover:text-white transition-all duration-400 animate-slideUp"
+                data-project="givit">
+                <h3 class="text-2xl font-bold mb-2">GIVIT App <i class="fas fa-arrow-right"></i></h3>
+                <p class="mb-2"><strong>Description:</strong> Secure giveaway platform with real-time features and
+                    payment integration.</p>
+                <p class="mb-2"><strong>Technologies:</strong> React, Node.js, Express, Socket.io, Stripe/PayPal</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-project-content">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact"
+        class="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center animate-slideUp">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-6">
+            <i class="fas fa-envelope"></i> Contact
+        </h2>
+        <p class="mb-2 text-lg">Email: <a href="mailto:faizanzaferjut@gmail.com"
+                class="underline">faizanzaferjut@gmail.com</a></p>
+        <p class="mb-2 text-lg">LinkedIn: <a href="https://www.linkedin.com/in/faizan-zafar-46a382159/" target="_blank"
+                class="underline">linkedin.com/in/faizan-zafar</a></p>
+        <p class="mb-4 text-lg">GitHub: <a href="https://github.com/faizanzafer" target="_blank"
+                class="underline">github.com/faizanzafer</a></p>
+        <a href="mailto:faizanzaferjut@gmail.com"
+            class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-block">Send
+            a Message</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-gray-300 dark:text-gray-400 bg-gray-900">
+        &copy; 2025 Faizan Zafar. All rights reserved.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

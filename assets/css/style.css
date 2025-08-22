@@ -1,0 +1,386 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Card hover animation with icon movement */
+.card {
+    transform: translateY(0) scale(1);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 i {
+    transition: transform 0.3s;
+    margin-left: 0.5rem;
+}
+
+.card:hover h3 i {
+    transform: translateX(5px);
+}
+
+/* Skill bubbles */
+.skill-bubble {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-bubble:hover {
+    transform: translateY(-5px) scale(1.1) rotate(-2deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Wave animation */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+}
+
+.wave-hand {
+    display: inline-block;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+/* Scroll-in animations */
+.animate-slideUp {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-out;
+}
+
+.animate-slideUp.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fadeIn {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.animate-fadeIn.active {
+    opacity: 1;
+}
+
+/* Typing animation */
+.typing-text {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* Particle canvas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Section title icons */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.section-title i {
+    font-size: 1.5rem;
+    color: #8b5cf6;
+    transition: transform 0.3s;
+}
+
+.section-title:hover i {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform: translateY(50px);
+    transition: transform 0.4s ease;
+}
+
+.dark .modal-content {
+    background-color: #374151;
+    color: #f3f4f6;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.dark .modal-header {
+    border-bottom: 1px solid #4b5563;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    padding: 2rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.project-detail {
+    margin-bottom: 1.5rem;
+}
+
+.project-detail h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #4f46e5;
+}
+
+.dark .project-detail h4 {
+    color: #818cf8;
+}
+
+.screenshots-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.screenshot-item {
+    flex: 1 1 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-item {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.feature-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* Mobile Navigation */
+.mobile-menu-button {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 40;
+}
+
+.dark .mobile-menu {
+    background-color: #374151;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    padding: 1rem 0;
+}
+
+.mobile-menu li {
+    padding: 0.75rem 1.5rem;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .screenshot-item {
+        flex: 1 1 100%;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    /* Mobile nav */
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    /* Typing text adjustments */
+    .typing-text {
+        white-space: normal;
+        border-right: none;
+        text-overflow: clip;
+        overflow: visible;
+    }
+
+    #typing {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    #typing {
+        font-size: 1rem;
+    }
+}
